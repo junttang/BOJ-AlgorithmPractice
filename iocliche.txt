@@ -1,6 +1,7 @@
 입출력 성능향상
 ios_base::sync_with_stdio(false);
 cin.tie(nullptr);
+(이 구문 사용 시 주의점 : cin과 cout만 사용해야한다. 위 구문을 추가해놓고 scanf나 printf를 사용하면 동기화 과정에서 알수없는 오류가 발생하여 BOJ 채점 시 불필요한 에러를 발생시킬 수 있다. ★★★)
 
 버퍼클리어
 cin.ignore();
