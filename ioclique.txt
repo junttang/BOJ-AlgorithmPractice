@@ -1,0 +1,9 @@
+입출력 성능향상
+ios_base::sync_with_stdio(false);
+cin.tie(nullptr);
+
+버퍼클리어
+cin.ignore();
+
+한 줄로 입력(개행은 무시)
+getline(cin, buffer);
