@@ -80,8 +80,8 @@ int main(void) {
 	frontSize = front.size;
 	rearSize = rear.size;
 
-	for (int i = 0; i < frontSize; i++)
-		input[frontSize - 1 - i] = front.pop();
+	for (int i = 0; i < frontSize; i++)		// 굳이 옮기지 않고 front 스택의 top을 rear 스택으로 다 옮겨버리고
+		input[frontSize - 1 - i] = front.pop();	// rear스택을 지속적으로 pop해주는 방식으로 해도 됨. (스택의 원리 이용★)
 	for (int i = 0; i < frontSize; i++)
 		cout << input[i];
 	for (int i = 0; i < rearSize; i++)
