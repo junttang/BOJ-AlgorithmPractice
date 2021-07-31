@@ -2,7 +2,7 @@
 #include <stack>
 #include <string>
 #include <array>
-// BOJ - 11656 접미사 
+// BOJ - 11656 접미사배열
 
 using namespace std;
 
