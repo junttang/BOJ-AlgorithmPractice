@@ -2,7 +2,7 @@
 #include <stack>
 #include <string>
 #include <array>
-// BOJ - 11656 Á¢¹Ì»ç ¹è¿­
+// BOJ - 11656 ì ‘ë¯¸ì‚¬ 
 
 using namespace std;
 
