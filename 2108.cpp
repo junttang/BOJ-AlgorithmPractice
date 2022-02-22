@@ -6,17 +6,19 @@ using namespace std;
 int number[8001];
 
 int main(void) {
-	int n, num, maximum, minimum, maxcnt = 0, maxcntnum, cntsum = 0, median; 
-	double sum = 0;
+	int n, num, maximum, minimum, maxcnt = 0, maxcntnum, cntsum = 0, median;
+	double sum = 0, avg;
 
 	cin >> n;
 	for (int i = 0; i < n; i++) {
-		cin >> num; 
+		cin >> num;
 		sum += num;
 		number[num + 4000]++;
 	}
 
-	printf("%.0f\n", sum / (double)n);	// »ê¼úÆò±Õ
+	avg = sum / (double)n;
+	if (avg > -0.5 && avg < 0) avg = -avg;
+	printf("%.0f\n", avg);	// ì‚°ìˆ í‰ê· 
 
 	for (int i = 0; i < 8001; i++) {
 		if (number[i] > 0)
@@ -26,7 +28,7 @@ int main(void) {
 			break;
 		}
 	}
-	cout << median << endl;	// Áß¾Ó°ª
+	cout << median << endl;	// ì¤‘ì•™ê°’
 
 	for (int i = 0; i < 8001; i++) {
 		if (number[i] > maxcnt) {
@@ -40,7 +42,7 @@ int main(void) {
 			break;
 		}
 	}
-	cout << maxcntnum << endl;	// ÃÖºó°ª
+	cout << maxcntnum << endl;	// ìµœë¹ˆê°’
 
 	for (int i = 8000; i >= 0; i--) {
 		if (number[i] > 0) {
@@ -54,7 +56,7 @@ int main(void) {
 			break;
 		}
 	}
-	cout << maximum - minimum;	// ¹üÀ§
+	cout << maximum - minimum;	// ë²”ìœ„
 
 	return 0;
 }
